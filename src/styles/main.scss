@@ -1,0 +1,31 @@
+@import "base";
+@import "~bootstrap/scss/bootstrap";
+
+html {
+  height: 100%;
+  font-size: 16px;
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-normal;
+}
+
+body {
+  height: 100%;
+  background-color: $background;
+  margin: 0 auto;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  > main {
+    flex: 1 1 auto;
+  }
+}
+
+.container-fluid {
+  max-width: 90rem;
+}
+
+
+

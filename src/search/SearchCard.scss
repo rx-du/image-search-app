@@ -1,0 +1,107 @@
+@import "../styles/variables";
+@import "~bootstrap/scss/bootstrap";
+
+.result-container {
+    .image-container {
+        .image {
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+
+                &:after {
+                    content: 'Save';
+                    background-color: $maroon;
+                    color: $white;
+                    height: 15px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    text-align: center;
+                    padding: 2px;
+                    font-weight: 500;
+                    font-size: 8px;
+
+                    @include media-breakpoint-up(md) {
+                        height: 30px;
+                        font-size: 16px;
+                    }
+
+                }
+
+            }
+
+            > img {
+                width: 100%;
+            }
+        }
+
+        .saved {
+            &:after {
+                content: 'Saved' !important;
+                background-color: $orange !important;
+                color: $white;
+                height: 15px;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                text-align: center;
+                padding: 2px;
+                font-weight: 500;
+                font-size: 8px;
+
+                @include media-breakpoint-up(md) {
+                    height: 30px;
+                    font-size: 16px;
+                }
+
+            }
+        }
+    }
+
+    .image-info {
+        font-size: 8px;
+        display: flex;
+        flex-direction: column;
+        @include media-breakpoint-up(sm) { font-size: 12px; }
+        @include media-breakpoint-up(md) { font-size: 14px; }
+        @include media-breakpoint-up(lg) { font-size: 16px; }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            > span {
+                background-color: $teal;
+                padding: 1px 10px;
+                margin-right: 6px;
+                margin-bottom: 3px;
+                color: $white;
+            }
+        }
+
+        .spacer {
+            flex-grow: 1;
+        }
+
+        .likes-favs {
+            font-weight: 800;
+
+            .icon {
+                height: 12px;
+                padding-bottom: 4px;
+
+                @include media-breakpoint-up(sm) { height: 14px; }
+                @include media-breakpoint-up(md) { height: 16px; }
+                @include media-breakpoint-up(lg) { height: 18px; }
+            }
+
+            .likes {
+                margin-right: 20px;
+                @include media-breakpoint-up(md) { margin-right: 40px; }
+            }
+        }
+    }
+}

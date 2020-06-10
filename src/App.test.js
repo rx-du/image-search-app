@@ -1,9 +1,9 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen} from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('renders search element', () => {
+  render(<App />);
+  const SearchEl = screen.getAllByTestId('search');
+  expect(SearchEl[0]).toBeInTheDocument();
 });
