@@ -14,7 +14,7 @@ function SearchCard(props) {
     return (
         <div className="row result-container mt-lg-4 mb-lg-4 mt-3 mb-3" data-testid="result">
             <div className="col-lg-8 col-6 pr-lg-3 pr-0 image-container">
-                <div className={'image' + (props.isSaved ? ' saved' : '')} onClick={event => handleImageClick()} data-testid="result-image">
+                <div className={'image' + (props.isSaved ? ' saved' : '')} onClick={handleImageClick} data-testid="result-image">
                     <img src={props.result.largeImageURL} alt="thumbnail" />
                 </div>
             </div>

@@ -19,7 +19,7 @@ function Search() {
     const [savedResults, setSavedResults] = useState([]);
 
     const handleSearch = (event) => {
-        makeApiCall(searchInput, searchCategory !== 'Category...' ? searchCategory : '');
+        makeApiCall(searchInput.toLowerCase().trim(), searchCategory !== 'Category...' ? searchCategory : '');
         event.preventDefault();
     };
 
@@ -39,7 +39,7 @@ function Search() {
             largeImageURL: result.largeImageURL
         }
         setSavedResults([...savedResults, item]);
-    }
+    };
 
     return (
         <div className="container-fluid search" data-testid="search">
